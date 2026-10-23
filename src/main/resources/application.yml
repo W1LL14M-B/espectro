@@ -1,0 +1,5 @@
+app:
+  external-services:
+    jsonplaceholder:
+      base-url: https://jsonplaceholder.typicode.com
+      timeout-ms: 5000
