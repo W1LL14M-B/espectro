@@ -1,5 +1,43 @@
+server:
+  port: 8080
+
+# H2 para que no te falle el DataSource, no necesitas MySQL para probar
+spring:
+  datasource:
+    url: jdbc:h2:mem:espectrodb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
 app:
   external-services:
     jsonplaceholder:
       base-url: https://jsonplaceholder.typicode.com
       timeout-ms: 5000
+  jwt:
+    secret: dGhpcy1pcy1hLXNlY3JldC1rZXktZm9yLWVzcGVjdHJvLXByb2plY3QtMTIzNDU2Nzg5MDEyMw==
+    expiration-ms: 3600000
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      externo:
+        failure-rate-threshold: 50
+  retry:
+    instances:
+      externo:
+        max-attempts: 3

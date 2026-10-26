@@ -3,7 +3,7 @@ package com.william.conectivida.espectro.conectividad_espectro.controller;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+//import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,13 +28,13 @@ public class EspectroController {
         return resp;
     }
 
-    @GetMapping("/pokemon/{nombre}")
+  /*   @GetMapping("/pokemon/{nombre}")
     public Dtos.ApiResponse<Dtos.Pokemon> pokemon(@PathVariable String nombre) {
         var datos = service.obtenerPokemon(nombre);
         var resp = new Dtos.ApiResponse<Dtos.Pokemon>();
         resp.setOrigen("pokeapi");
         resp.setDatos(datos);
         return resp;
-    }
+    } */
 }
 

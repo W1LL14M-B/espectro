@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio</title>
+  <link rel="stylesheet" th:href="@{/css/auth.css}">
+</head>
+<body>
+  <div class="wrap">
+    <section class="card home">
+      <p class="brand">Conectividad Espectro</p>
+      <h1>Hola, <span th:text="${nombre} ?: 'usuario'">usuario</span></h1>
+      <p class="meta">Sesión iniciada como <span th:text="${email}"></span></p>
+      <div class="row">
+        <a class="btn" th:href="@{/api/espectro/posts}">Ver posts</a>
+        <form th:action="@{/logout}" method="post">
+          <button type="submit">Cerrar sesión</button>
+        </form>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

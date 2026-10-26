@@ -9,18 +9,18 @@ import org.springframework.context.annotation.Configuration;
 import lombok.Getter;
 import lombok.Setter;
 
-
-@Getter @Setter
+@Getter
+@Setter
 @Configuration
 @ConfigurationProperties(prefix = "app")
 public class ExternalServicesProperties {
     private Map<String, ServiceConfig> externalServices = new HashMap<>();
 
-    @Getter @Setter
+    @Getter
+    @Setter
     public static class ServiceConfig {
         private String baseUrl;
         private String apiKey;
         private int timeoutMs = 5000;
     }
 }
-

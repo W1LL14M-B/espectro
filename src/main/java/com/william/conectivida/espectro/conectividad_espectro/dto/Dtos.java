@@ -12,27 +12,6 @@ public class Dtos {
     }
 
     @Data
-    public static class Pokemon {
-        private String name;
-        private int id;
-        private Sprites sprites;
-
-        @Data
-        public static class Sprites {
-            private String front_default;
-        }
-    }
-
-    /*
-     * @Data
-     * public static class ApiResponse<T> {
-     * private boolean ok = true;
-     * private String origen;
-     * private T datos;
-     * }
-     */
-
-    @Data
     public static class ApiResponse<T> {
         private boolean ok = true;
         private String origen = "jsonplaceholder";

@@ -19,8 +19,8 @@ public class EspectroService {
         return externalClient.get("jsonplaceholder", "/posts", new ParameterizedTypeReference<List<Dtos.Post>>() {});
     }
 
-    public Dtos.Pokemon obtenerPokemon(String nombre) {
+ /*    public Dtos.Pokemon obtenerPokemon(String nombre) {
         return externalClient.get("pokeapi", "/pokemon/" + nombre.toLowerCase(), new ParameterizedTypeReference<Dtos.Pokemon>() {});
-    }
+    } */
 }
 
